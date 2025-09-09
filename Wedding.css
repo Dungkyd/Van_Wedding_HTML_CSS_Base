@@ -1,0 +1,367 @@
+body {
+    background-color: #fff;
+}
+
+/* Header*/
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+
+}
+
+/* login=signup */
+.container-login {
+    display: flex;
+    justify-content: right;
+    margin-right: 50px;
+    padding: 10px;
+    gap: 5px;
+}
+
+.link-header {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+
+}
+
+.link-header:hover {
+    color: Burlywood;
+}
+
+/* Tiêu đề-VanWedding */
+.container {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+}
+
+.container h1 {
+    font-family: Poppins, sans-serif;
+    font-size: 40px;
+    margin: 0;
+}
+
+/* Main- nav */
+.main-nav {}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    justify-content: center;
+}
+
+.main-nav ul li {
+    margin: 0;
+}
+
+.drop-down {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: #fff;
+    width: 200px;
+    list-style: none;
+    font-size: 18px;
+    left: 26%;
+    top: 150px;
+}
+
+.drop-down li {
+    padding: 10px;
+}
+
+.f-drop a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+
+.main-nav ul li:hover .drop-down {
+    display: block;
+    z-index: 1;
+}
+
+/* Slide bar */
+.slide-bar {
+    height: 491px;
+    width: 1460px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-bar img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    animation: slideAnim 10s infinite;
+}
+
+.slide-bar img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide-bar img:nth-child(2) {
+    animation-delay: 5s;
+}
+
+@keyframes slideAnim {
+
+    0%,
+    49.99% {
+        opacity: 1;
+    }
+
+    49.99% {
+        opacity: 0;
+    }
+}
+
+/* kẻ ngang */
+.divider {
+    border: none;
+    height: 2px;
+    background: #333;
+    margin: 10px 0;
+}
+
+/* Main */
+main {
+    margin: 100px 0;
+}
+
+main h3 {
+    font-family: segoe ui, sans-serif;
+    font-size: 30px;
+    margin-left: 168px;
+    margin-bottom: 0;
+}
+
+.infor {
+    font-family: segoe ui, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sub-h3 {
+    font-family: segoe ui, sans-serif;
+    font-size: 15px;
+    margin-left: 168px;
+    margin-top: 5px;
+}
+
+.main-card {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.main-card img {
+    height: 211px;
+    width: 379px;
+}
+
+.main-card img:hover,
+.infor:hover {
+    cursor: pointer;
+}
+
+/* ảnh quảng cáo */
+.img-qc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+    align-items: center;
+}
+
+.img-qc img {
+    width: 1164px;
+    height: 413px;
+}
+
+.img-qc a {
+    margin-top: 50px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: Segoe ui, sans-serif;
+}
+
+/* thiệp cưới */
+.para {
+    font-family: Segoe ui, sans-serif;
+    font-weight: bold;
+}
+
+/* nút màu xanh */
+#img1-1,
+#img3-1 {
+    appearance: none;
+    /* bỏ giao diện mặc định */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    background-color: lightskyblue;
+    /* màu khi chưa tick */
+    cursor: pointer;
+}
+
+#img1-1:checked,
+#img3-1:checked {
+    outline: 1px solid black;
+    /* viền ngoài */
+    outline-offset: 5px;
+    /* khoảng cách */
+
+
+}
+
+/* nút màu vàng */
+#img2-1,
+#img2-2,
+#img2-3,
+#img1-2 {
+    appearance: none;
+    /* bỏ giao diện mặc định */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    background-color: yellow;
+    /* màu khi chưa tick */
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#img2-1:checked,
+#img2-3:checked,
+#img2-2:checked,
+#img1-2:checked {
+    outline: 1px solid black;
+    /* viền ngoài */
+    outline-offset: 5px;
+    /* khoảng cách */
+}
+
+#img2-3 {
+    margin-left: 0px;
+}
+
+/* nút màu đỏ */
+#img1-3 {
+    appearance: none;
+    /* bỏ giao diện mặc định */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    background-color: #800000;
+    /* màu khi chưa tick */
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#img1-3:checked {
+    outline: 1px solid black;
+    /* viền ngoài */
+    outline-offset: 5px;
+    /* khoảng cách */
+
+}
+
+/* màu xanh lá cây */
+#img2-2 {
+    appearance: none;
+    /* bỏ giao diện mặc định */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    background-color: limegreen;
+    /* màu khi chưa tick */
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#img2-2:checked {
+    outline: 1px solid black;
+    /* viền ngoài */
+    outline-offset: 5px;
+    /* khoảng cách */
+
+}
+
+.card-2nd {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Footer */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 85%;
+    margin: auto;
+    margin-bottom: 60px;
+    gap: 5px;
+}
+
+.socials a {
+    color: #000;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.slogan {
+    font-family: segoe ui, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.footer-col-2 p
+{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.footer-col-3 p
+{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.footer-col-4 p
+{
+    font-size: 15px;
+    text-align: end;
+    margin-bottom: 0;
+}
+
+.footer-col-4 img
+{
+    margin-top: 20px;
+    margin-left: 10px;
+}
